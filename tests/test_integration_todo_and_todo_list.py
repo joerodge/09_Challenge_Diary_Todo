@@ -71,7 +71,7 @@ def test_complete_returns_empty_list_when_no_todos_added():
 
 # Test .give_up()
 
-def test_complete():
+def test_give_up():
     todo_list = TodoList()
     todo1 = Todo('Task1')
     todo2 = Todo('Task2')
@@ -84,7 +84,7 @@ def test_complete():
     assert [todo.completed for todo in todo_list.todos] == [True, True, True]
 
 
-def test_complete_when_no_todos_added_is_not_an_error():
+def test_give_up_when_no_todos_added_is_not_an_error():
     todo_list = TodoList()
     todo_list.give_up()
     assert todo_list.todos == []
