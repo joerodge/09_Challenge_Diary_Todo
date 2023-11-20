@@ -1,4 +1,5 @@
 class TodoList:
+    
     def __init__(self):
         self.todos = []
 
@@ -38,6 +39,7 @@ class TodoList:
 
 
 class Todo:
+
     def __init__(self, task):
         """Parameters:
             task: a string representing the task to be done

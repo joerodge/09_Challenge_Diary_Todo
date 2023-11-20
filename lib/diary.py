@@ -1,13 +1,22 @@
 import math
 
-#TODO intergrate TodoList into Diary
-
 class Diary:
 
     def __init__(self):
         self.entries = []
         self.contacts = {}
         self.entry_index = 0
+        self.todo_list = None
+
+
+    def add_todo_list(self, todo_list):
+        """Parameters:
+            todo_list: an instance of a TodoList
+        Returns:
+            None
+        Side-effects:
+            Adds the TodoList to the diary"""
+        self.todo_list = todo_list
 
 
     def add(self, entry):
@@ -96,6 +105,7 @@ class Diary:
         Side effects:
             Adds contact to contacts dict. key=name, value=number"""
         self.contacts[name] = number
+
 
     def get_contacts(self):
         """Returns:
